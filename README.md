@@ -1,5 +1,5 @@
 **Quy trình training** 
-1. Mở folder source trên vscode
+1. Tạo 1 folder mới chứa các folder của project
 2. đi đến mục scripts chạy training tuần tự như sau:
 train_SFT.py -> train_rw.py -> train_ppo 
 3. chạy tiếp auto_feedback_gen.py -> convert_feedback_to_preference.py -> train_rw.py -> train_ppo 
