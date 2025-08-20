@@ -1,3 +1,5 @@
+Luật Bảo vệ quyền lợi người tiêu dùng 2023
+
 **Quy trình training** 
 1. Tạo 1 folder mới chứa các folder của project
 2. đi đến mục scripts chạy training tuần tự như sau:
