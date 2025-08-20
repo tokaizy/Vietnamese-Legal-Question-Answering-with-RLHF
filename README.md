@@ -4,7 +4,7 @@
 train_SFT.py -> train_rw.py -> train_ppo 
 3. chạy tiếp auto_feedback_gen.py -> convert_feedback_to_preference.py -> train_rw.py -> train_ppo 
 để lặp lại theo quy trình của RLHF
-4. Chạy file inference_chat.py để bắt đâù hỏi đáp
+4. Chạy file webserver.py để bắt đâù hỏi đáp
 
 thư mục data - chứa dữ lieu dùng training
 thư mục xlm_data - chứa dữ lieu thông tin văn bản luật 
