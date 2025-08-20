@@ -1,0 +1,15 @@
+[User]: Điều kiện để được cấp bằng sáng chế là gì?
+[Bot]: 
+
+[User]: chào
+[Bot]: 
+
+[User]: 
+[Bot]: 
+
+[User]: lạc đề
+[Bot]: 
+
+[User]: Luật sở hữu trí tuệ là gì?
+[Bot]: 
+

@@ -1,0 +1,49 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot RLHF</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+    #chat-box { background: #fff; padding: 20px; max-width: 600px; margin: auto; border-radius: 8px; }
+    .message { margin: 10px 0; }
+    .user { color: blue; font-weight: bold; }
+    .bot { color: green; font-weight: bold; }
+    #input-area { display: flex; margin-top: 10px; }
+    input { flex: 1; padding: 10px; font-size: 1rem; }
+    button { padding: 10px; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <div id="chat-box">
+    <h2>RLHF Chatbot</h2>
+    <div id="messages"></div>
+    <div id="input-area">
+      <input type="text" id="user-input" placeholder="Nhập tin nhắn..." />
+      <button onclick="sendMessage()">Gửi</button>
+    </div>
+  </div>
+
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById("user-input");
+      const message = input.value.trim();
+      if (!message) return;
+
+      const messagesDiv = document.getElementById("messages");
+      messagesDiv.innerHTML += `<div class="message user">Bạn: ${message}</div>`;
+      input.value = "";
+
+      const res = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      });
+
+      const data = await res.json();
+      messagesDiv.innerHTML += `<div class="message bot">Bot: ${data.response}</div>`;
+    }
+  </script>
+</body>
+</html>
